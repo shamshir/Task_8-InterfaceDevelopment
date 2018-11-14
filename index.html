@@ -32,7 +32,38 @@
         margin-top: 2px;
       }
 
-      /* Step 2: Your CSS code goes here */
+      /* CSS code for selectable element */
+      #selectable .ui-selecting {
+        background: #FECA40;
+      }
+      #selectable .ui-selected {
+        background: #F39814; color: white;
+      }
+      #selectable li:before {
+        content: "\2713 ";
+        color: transparent;
+      }
+      #selectable li.ui-selecting:before {
+        content: "\2713 ";
+        color: black;
+      }
+      #selectable li.ui-selected:before {
+        content: "\2713 ";
+        color: white;
+      }
+      #selectable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 150px;
+        cursor: pointer;
+      }
+      #selectable li {
+        margin: 3px;
+        padding: 0.4em;
+        font-size: 1.0em;
+        height: 16px;
+      }
 
       /* Step 3: Your CSS code goes here */
 
@@ -46,7 +77,8 @@
       /* Date picker for date input field */
       $("#date").datepicker({ minDate: (new Date(2018, 8, 1)), maxDate: (new Date(2018, 9, 15)) });
 
-      /* Step 2: Your js code goes here */
+      /* Selectable initialization */
+      $("#selectable").selectable();
 
       /* Step 3: Your js code goes here */
 
@@ -70,13 +102,16 @@
   <div id="year_input">
     <h3>Are you enrolled in DAM or DAW?</h3>
 
-    <!-- Comment out this part of the form after Step 2 -->
+    <!-- Previous course selector 
     <input type="radio" name="enroll_year" id="ugrad" value="ugrad">
     <label for="ugrad">DAM (taking Interface Development)</label><br>
     <input type="radio" name="enroll_year" id="grad" value="grad">
-    <label for="grad">DAW (taking Interface Web Development)</label>
+    <label for="grad">DAW (taking Interface Web Development)</label>-->
 
-    <!-- Step 2: Your HTML here -->
+    <ol id="selectable">
+      <li class="ui-widget-content">DAM (taking Interface Development)</li>
+      <li class="ui-widget-content">DAW (taking Interface Web Development)</li>
+    </ol>
   </div>
 
   <div id="color_input">

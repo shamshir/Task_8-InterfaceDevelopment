@@ -102,7 +102,8 @@
       $("#sortable").sortable();
       $("#sortable").disableSelection();
 
-      /* Step 4: Your js code goes here */
+      /* Tooltip initialization */
+      $(document).tooltip();
 
     });
   </script>
@@ -123,22 +124,20 @@
     <h3>Are you enrolled in DAM or DAW?</h3>
 
     <!-- Previous course selector 
-
     <input type="radio" name="enroll_year" id="ugrad" value="ugrad">
     <label for="ugrad">DAM (taking Interface Development)</label><br>
     <input type="radio" name="enroll_year" id="grad" value="grad">
     <label for="grad">DAW (taking Interface Web Development)</label>-->
 
     <ol id="selectable">
-      <li class="ui-widget-content">DAM (taking Interface Development)</li>
-      <li class="ui-widget-content">DAW (taking Interface Web Development)</li>
+      <li class="ui-widget-content" title="taking Interface Development">DAM</li>
+      <li class="ui-widget-content" title="taking Interface Web Development">DAW</li>
     </ol>
   </div>
 
   <div id="color_input">
 
     <!-- Previous color selector
-
     <h3>Rank the colors listed from your most favorite (1)
       to your least favorite (5). Be sure to only use each ranking once.</h3>
     <input type="text" class="rank_color" id="red">

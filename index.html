@@ -85,7 +85,11 @@
         margin-left: -1.3em;
       }
 
-      /* Step 4: Your CSS code goes here */
+      /* CSS code for color tooltips */
+      .color_swatch{
+        height: 50px;
+        width: 50px;
+      }
 
     </style>
 
@@ -102,8 +106,22 @@
       $("#sortable").sortable();
       $("#sortable").disableSelection();
 
-      /* Tooltip initialization */
-      $(document).tooltip();
+      /* Tooltip function */
+      $(document).tooltip({
+        items: "[title], [class]",
+        content: function() {
+          var element = $(this);
+          if (element.is("[title]")){
+            return element.attr("title");
+          }
+          if (element.is("[class]")){
+            if (element.hasClass("ui-state-default")) {
+              var text = element.text(); //in this case, will be the desired color
+              return "<div class='color_swatch' style='background:" + text + "'></div>";
+            }
+          }
+        }
+      });
 
     });
   </script>

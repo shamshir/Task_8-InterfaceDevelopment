@@ -116,7 +116,7 @@
             return element.attr("title");
           }
           if (element.is("[class]")) {
-            if (element.hasClass("ui-state-default")) {
+            if (element.hasClass("colorTooltip")) {
               var text = element.text();
               return "<div class='color_swatch' style='background:" + text + "'></div>";
             }
@@ -174,11 +174,11 @@
     <label for="dark_green">#125e18</label><br />-->
 
     <ul id="sortable">
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#ff0000</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#0000ff</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#ff00b3</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#ded447</li>
-      <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#125e18</li>
+      <li class="ui-state-default colorTooltip"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#ff0000</li>
+      <li class="ui-state-default colorTooltip"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#0000ff</li>
+      <li class="ui-state-default colorTooltip"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#ff00b3</li>
+      <li class="ui-state-default colorTooltip"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#ded447</li>
+      <li class="ui-state-default colorTooltip"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>#125e18</li>
     </ul>
   </div>
 
